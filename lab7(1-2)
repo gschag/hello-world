@@ -1,1 +1,71 @@
+package lab7;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.io.*;
+
+/**
+ * Created by Toughbook on 5/27/2016.
+ */
+public class problem1 {
+    public static void main(String[] args) throws IOException
+    {
+
+    countLines();
+
+
+    }
+
+    public static void countLines() {
+
+        int sum = 0;
+
+        Scanner kb = new Scanner(System.in);
+        System.out.println("Enter the file you wish to know the number of lines of: ");
+
+        String filename = kb.nextLine();
+
+        File file = new File(filename);
+
+        Scanner inputFile = new Scanner(filename);
+
+
+        int currentLine = 0;
+
+        while (inputFile.hasNext())
+        {
+            inputFile.nextLine();
+            sum++;
+
+        }
+
+        inputFile.close();
+        System.out.println("There are " + sum + " lines in the file.");
+
+
+    }
+
+    private static void readArray(int [] array) throws IOException
+    {
+                 Scanner keyboard = new Scanner(new File("manylines.txt"));
+
+                 System.out.println("Placing numbers in text files and placing them into array...");
+
+
+
+                    ArrayList<Integer> numbers = new ArrayList<Integer>();
+
+                    while(keyboard.hasNext())
+                    {
+
+                        numbers.add(keyboard.nextInt());
+                        keyboard.nextLine();
+
+                    }
+                    System.out.println(numbers);
+                    keyboard.close();
+
+    }
+
+}
 
