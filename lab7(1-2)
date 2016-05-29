@@ -1,6 +1,5 @@
 package lab7;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.io.*;
 
@@ -11,11 +10,16 @@ public class problem1 {
     public static void main(String[] args) throws IOException
     {
 
-    countLines();
-
+        countLines();
+        readArray([]);
+        findMax();
 
     }
 
+
+
+
+    //Problem 1
     public static void countLines() {
 
         int sum = 0;
@@ -44,12 +48,13 @@ public class problem1 {
 
 
     }
-
-    private static void readArray(int [] array) throws IOException
+                //Problem 2
+                 public static void readArray(int[] array) throws IOException
     {
+
                  Scanner keyboard = new Scanner(new File("manylines.txt"));
 
-                 System.out.println("Placing numbers in text files and placing them into array...");
+                 System.out.println("Taking numbers in text files and placing them into array...");
 
 
 
@@ -62,10 +67,26 @@ public class problem1 {
                         keyboard.nextLine();
 
                     }
-                    System.out.println(numbers);
+
+                    for(int index = 0; index< numbers.size(); index++)
+                    {
+                        System.out.println(numbers.get(index));
+
+                    }
+
                     keyboard.close();
 
+
+
     }
+            //problem 3
+            private static int findMax(int [] array)
+            {
+                return
+
+            }
+
+
 
 }
 
